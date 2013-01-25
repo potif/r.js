@@ -22,6 +22,8 @@
                 }
             }, function (buildText) {
                 document.getElementById('buildMessages').value = buildText;
+            }, function (err) {
+                document.getElementById('errorMessage').value = err.message;
             });
         }, false);
     }, false);
@@ -42,5 +44,8 @@
 
     <h2>Output</h2>
     <textarea id="output"></textarea>
+
+    <h2>Error Message</h2>
+    <textarea id="errorMessage"></textarea>
 </body>
 </html>
